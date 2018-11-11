@@ -1,0 +1,36 @@
+# Logger configuration
+log:
+  # Available levels: trace, debug, info, warn, error, fatal, panic
+  level: info
+
+  # Available formats: json, text
+  format: json
+
+# HTTP Server configuration
+server:
+  # Bind address
+  address: 0.0.0.0:8000
+
+  # Server timeouts
+  timeout:
+    read: 5s
+    write: 10s
+
+  # Graceful shutdown configuration
+  shutdown:
+    timeout: 30s
+
+  # Additional logging configuration
+  log:
+    requests: true
+
+# Nomad API
+nomad:
+  url: http://127.0.0.1:4646
+
+# Define repository <-> jobs mapping
+#
+# jobs:
+#   something/something:
+#     - some-nomad-job
+#     - another-nomad-job
